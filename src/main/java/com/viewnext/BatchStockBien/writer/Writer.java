@@ -11,6 +11,11 @@ import com.viewnext.BatchStockBien.model.Producto;
 @Component
 public class Writer {
 
+	/**
+	 * Es para hacer un writer de producto para hacerlo en csv
+	 * 
+	 * @return un FlatFileItemWriter<Producto>
+	 */
 	@Bean
 	public FlatFileItemWriter<Producto> stockWriter() {
 

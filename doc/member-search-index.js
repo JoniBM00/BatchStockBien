@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.viewnext.BatchStockBien.writer","c":"Writer","l":"stockWriter()"},{"p":"com.viewnext.BatchStockBien.writer","c":"Writer","l":"Writer()","u":"%3Cinit%3E()"}];updateSearchResults();

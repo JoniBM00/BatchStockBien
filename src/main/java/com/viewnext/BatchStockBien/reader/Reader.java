@@ -14,6 +14,11 @@ import com.viewnext.BatchStockBien.model.Producto;
 @Component
 public class Reader {
 
+	/**
+	 * Retorna un reader de stockTerminales.dat
+	 * 
+	 * @return Un FlatFileItemReader<Producto>
+	 */
 	@Bean
 	public FlatFileItemReader<Producto> stockReader() {
 		FlatFileItemReader<Producto> itemReader = new FlatFileItemReader<>();
@@ -24,6 +29,11 @@ public class Reader {
 		return itemReader;
 	}
 
+	/**
+	 * Para hacer los delimiter del csv
+	 * 
+	 * @return un LineMapper<Producto>
+	 */
 	private LineMapper<Producto> lineMapper() {
 		DefaultLineMapper<Producto> lineMapper = new DefaultLineMapper<>();
 		DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();

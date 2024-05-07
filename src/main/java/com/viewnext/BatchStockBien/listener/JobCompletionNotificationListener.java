@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 public class JobCompletionNotificationListener implements JobExecutionListener {
 
 	/**
-	 * Probando
+	 * Es para ver si ha completado o no el job
 	 */
 	@Override
 	public void afterJob(JobExecution jobExecution) {
 		if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
-			System.out.println("Todo hecho.");
+			log.info("Todo hecho.");
 		} else {
-			System.out.println("Error, no se ha completado.");
+			log.info("Error, no se ha completado.");
 		}
 	}
 
