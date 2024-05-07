@@ -8,8 +8,11 @@ import com.viewnext.BatchStockBien.model.Producto;
 
 public class ProductoItemProcessor implements ItemProcessor<Producto, Producto> {
 
-	private static final Logger log = LoggerFactory.getLogger(Producto.class);
+	private static final Logger log = LoggerFactory.getLogger(ProductoItemProcessor.class);
 
+	/**
+	 * Filtra para que solo recoja los productos que sean PENINSULA
+	 */
 	@Override
 	public Producto process(Producto item) throws Exception {
 		if (item.getLugar().equalsIgnoreCase("PENINSULA")) {
@@ -17,7 +20,6 @@ public class ProductoItemProcessor implements ItemProcessor<Producto, Producto> 
 		} else {
 			return null;
 		}
-
 	}
 
 }
